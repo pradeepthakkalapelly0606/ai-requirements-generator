@@ -1,0 +1,78 @@
+### 1. User Stories
+
+**User Story 1:**
+As a doctor, I want to view a patient's medical record so that I can make informed decisions about their treatment.
+
+**User Story 2:**
+As a nurse, I want to add notes to a patient's record to keep track of their progress and treatment updates.
+
+**User Story 3:**
+As a doctor or nurse, I want to upload lab reports to a patient's record so that all relevant information is available in one place.
+
+**User Story 4:**
+As a doctor, I want to update prescriptions for my patients so they have access to the latest medications and dosages.
+
+**User Story 5:**
+As a healthcare administrator, I want to ensure that access to patient records is role-based so that only authorized personnel can view sensitive information.
+
+**User Story 6:**
+As a healthcare auditor, I want to track all updates made to patient records so that I can ensure compliance and accountability.
+
+### 2. Acceptance Criteria
+
+**Acceptance Criteria for User Story 1:**
+- The system must allow doctors to view a complete medical history of a patient, including past visits, diagnoses, and treatments.
+
+**Acceptance Criteria for User Story 2:**
+- Nurses must be able to write and save notes in the patient’s medical record.
+- Notes must be timestamped with the author’s name.
+
+**Acceptance Criteria for User Story 3:**
+- The system must allow users to upload lab reports in multiple formats (PDF, JPEG, etc.).
+- The uploaded report must be accessible from the patient's record with a timestamp.
+
+**Acceptance Criteria for User Story 4:**
+- Doctors should be able to update prescriptions within a patient's record.
+- All prescriptions should display the name of the doctor who prescribed them and the date.
+
+**Acceptance Criteria for User Story 5:**
+- Only users with roles defined as 'doctor' and 'nurse' should have access to sensitive patient information.
+- Unauthorized users must receive an access denied message when trying to view these records.
+
+**Acceptance Criteria for User Story 6:**
+- All modifications to patient records must be logged with details (who made the change, what was changed, and when).
+- Auditors should be able to generate reports based on the logged data.
+
+### 3. Edge Cases
+
+- A doctor attempts to view a patient's record but is logged in with insufficient role permissions.
+- A nurse tries to upload a lab report, but the file size exceeds the system’s limits.
+- A doctor tries to update a prescription for a patient who is marked as inactive.
+- A user attempts to edit a note that they did not create.
+- A system failure during the upload of a lab report leads to data loss.
+
+### 4. Test Cases
+
+**Test Case for User Story 1:**
+- **Input:** A logged-in doctor requests to view a patient's medical record.
+- **Expected Outcome:** The system displays the complete medical history of the requested patient.
+
+**Test Case for User Story 2:**
+- **Input:** A logged-in nurse adds a note to a patient’s record.
+- **Expected Outcome:** The note appears in the patient’s record with the correct timestamp and author’s name.
+
+**Test Case for User Story 3:**
+- **Input:** An authorized user uploads a PDF lab report for a patient.
+- **Expected Outcome:** The report is successfully uploaded and accessible from the patient’s file with a timestamp.
+
+**Test Case for User Story 4:**
+- **Input:** A doctor updates a prescription for a patient.
+- **Expected Outcome:** The new prescription is saved and shows the name of the doctor and date of update.
+
+**Test Case for User Story 5:**
+- **Input:** An unauthorized user attempts to access a patient’s medical record.
+- **Expected Outcome:** The system displays an 'access denied' message.
+
+**Test Case for User Story 6:**
+- **Input:** A nurse makes an update to a patient's medical record.
+- **Expected Outcome:** The update is recorded in the audit log with all necessary details (who, what, when).
