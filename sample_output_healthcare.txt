@@ -1,0 +1,82 @@
+### 1. User Stories
+
+**User Story 1:**  
+As a doctor, I want to view and update patient medical records so that I can provide informed care based on the latest patient information.
+
+**User Story 2:**  
+As a nurse, I want to add notes and update prescriptions in the patient medical records so that I can ensure continuity of care and accurate treatment plans.
+
+**User Story 3:**  
+As a doctor or nurse, I want to upload lab reports to the medical records so that all patient data is centralized and easily accessible.
+
+**User Story 4:**  
+As a system administrator, I want to implement role-based access control so that only authorized staff can access sensitive patient information.
+
+**User Story 5:**  
+As an auditor, I want to track all updates made to patient medical records so that I can ensure compliance and maintain audit trails.
+
+### 2. Acceptance Criteria
+
+**Acceptance Criteria for User Story 1:**
+- The doctor can view the full medical record of a patient.
+- The doctor can update medical records with new information.
+- All changes made must be saved successfully and display a timestamp.
+
+**Acceptance Criteria for User Story 2:**
+- The nurse can add notes to the patient's medical record.
+- The nurse can update prescriptions, and the updates are reflected in real time.
+- All updates must include the author’s name and timestamp.
+
+**Acceptance Criteria for User Story 3:**
+- The doctor or nurse can upload lab reports in various formats (PDF, JPG).
+- The lab report is linked to the appropriate patient record.
+- The system provides a confirmation that the upload was successful.
+
+**Acceptance Criteria for User Story 4:**
+- Role-based access control is implemented for doctors, nurses, and admin users.
+- Unauthorized access attempts are denied with an appropriate error message.
+- Access logs are maintained for monitoring.
+
+**Acceptance Criteria for User Story 5:**
+- The system tracks all changes to patient records including the user, timestamp, and action taken.
+- Auditors can generate reports showing the history of updates for each patient.
+
+### 3. Edge Cases
+
+- A doctor attempts to access a patient's record without sufficient permissions.
+- A nurse tries to update a prescription with an invalid drug name or dosage.
+- A user loses internet connectivity while uploading a lab report.
+- A medical record update is made at the same time by two users on the same record.
+- The system encounters a file type when uploading lab reports that is not permitted.
+
+### 4. Test Cases
+
+**Test Case for User Story 1:**
+- **Scenario:** Doctor views a patient record.
+  - **Given:** A doctor is logged into the system.
+  - **When:** The doctor selects a patient from the patient list.
+  - **Then:** The doctor should see the patient’s complete medical history and current treatment plan.
+
+**Test Case for User Story 2:**
+- **Scenario:** Nurse adds a note.
+  - **Given:** A nurse is logged into the system and has access to a patient record.
+  - **When:** The nurse adds a note and saves it.
+  - **Then:** The note should appear in the patient’s medical record with the correct author and timestamp.
+
+**Test Case for User Story 3:**
+- **Scenario:** Upload a lab report.
+  - **Given:** A doctor is logged into the system.
+  - **When:** The doctor selects a lab report file and uploads it.
+  - **Then:** The lab report should be successfully uploaded and associated with the patient record.
+
+**Test Case for User Story 4:**
+- **Scenario:** Unauthorized access attempt.
+  - **Given:** A nurse is trying to access a confidential report without appropriate permissions.
+  - **When:** The nurse attempts to access the report.
+  - **Then:** Access should be denied with an error message indicating insufficient permissions.
+
+**Test Case for User Story 5:**
+- **Scenario:** Check audit trail.
+  - **Given:** An auditor accesses the audit trail feature.
+  - **When:** The auditor searches for changes made to a specific patient record.
+  - **Then:** The system should show a list of all updates, including user, action, and timestamp information.
